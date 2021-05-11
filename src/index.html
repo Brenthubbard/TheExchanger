@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+
+  <title>Currency Exchanger</title>
+</head>
+
+<body>
+  <div class="container">
+    <h3>Currency Exchanger</h3>
+    <form id="inputForm">
+
+      <label>Input desired amount of USD to be exchanged</label>
+      <input id="usdInput" type="number"><br>
+
+      <select class="form-control" name="currency" id="currencyChoice">
+        <option value="">Choose a currency</option>
+        <option value="VND">Vietnamese Dong</option>
+        <option value="TZS">Tanzanian Shilling</option>
+        <option value="THB">Thai Baht</option>
+        <option value="NZD">New Zealand Dollar</option>
+        <option value="JPY">Japanese Yen</option>
+      </select>
+
+      <button type="submit" id="button" class="btn btn-success">Show Exchange Rate</button>
+    </form>
+    <div>
+      <ul class="response"></ul>
+    </div>
+    <div class="showConversion_rates">
+
+    </div>
+  </div>
+  <script type="text/javascript" src="bundle.js"></script>
+</body>
+
+</html>
