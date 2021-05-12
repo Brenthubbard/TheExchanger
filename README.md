@@ -30,11 +30,16 @@ to download the code.
 * Type git clone and then paste the cloned project url.
 * CD into the cloned project.
 * Type "code ." to open the project in your code editor. OR
-* Drag cloned project into code editor if your command pallette does not support code .
+* Drag cloned project into code editor if your command pallette does not support the "code ." command.
 * You are now free to open a live server and use the app.
-* Open the terminal and do a npm install to load the all the extensions.
+* Navigate into the TheExchanger file. 
+* Open the terminal and do a npm install to load the all the dependencies.
+*  Then run the command _npm run build_ to bundle the files.
+* Run _npm run start_ to start the server.
+* To obtain an API key for this project:
 * Goto  https://www.exchangerate-api.com to get an API key for yourself.
-* Create a .env file and insert your API key there and put API_KEY in front of your key so the program can use it in the template.
+* Create a .env file and insert your API key there and put API_KEY= in front of your key so the program can use it in the template.
+*Be sure the .env file is in your .gitignore before you push anything or you will need to find a way to remove it once pushed.
 
 
 
