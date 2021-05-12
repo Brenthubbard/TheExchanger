@@ -10,7 +10,10 @@ async function makeApiCall(usdInput, currencyChoice) {
 }
 function getInputForm(usdInput, currencyChoice, response) {
   if (response.result === "success") {
-    $('.showConversion_rates').text(`Your $${usdInput} dollars is worth ${response.conversion_result} in ${currencyChoice}`);
+    if (response.conversion_result[currencyChoice]) {
+      $('.showConversion_rates').text(`Your $${usdInput} dollars is worth ${response.conversion_result} in ${currencyChoice}`);
+    } else {
+      return $('.results').text(`${currencyChoice} is not a valid choice. Please select a different currency.`);
   } else {
     $('.results').text(`There was an error. You encountered a ${response.statusText}please try again`);
   }
