@@ -12,7 +12,7 @@ function getInputForm(usdInput, currencyChoice, response) {
   if (response.result === "success") {
     $('.showConversion_rates').text(`Your $${usdInput} dollars is worth ${response.conversion_result} in ${currencyChoice}`);
   } else if (response.result === "error") {
-    return $('.results').text(`${currencyChoice} is not a valid choice. Please select a different currency.`);
+    return $('.results').text(`${currencyChoice} is not a valid choice. You have encountered a ${response.result} error. Please select a different currency.`);
 
   } else {
     $('.results').text(`There was an error. You encountered a ${response.statusText} response please try again`);
